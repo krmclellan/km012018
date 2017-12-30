@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   
 
-resources :articles
+  get 'static_pages/home'
 
-root 'welcome#index'
-get '/' => "welcome#index"
-get "/projects" => "welcome#projects"
-  get "/about" => "welcome#about"
-  get "/contact" => "welcome#contact"
+  get 'static_pages/portfolio'
+
+  get 'static_pages/contact'
+
+  get 'static_pages/about'
+
+root 'application#hello'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
